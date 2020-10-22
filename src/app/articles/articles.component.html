@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <ul class="list-group">
+        <app-article *ngFor="let article of articleService.getArticles()"
+                     [date]="article.created"
+                     [entitle]="article.headline"
+                     [id]="article.id"
+                     [image]="article.image"
+                     [wording]="article.wording"
+                     [writer]="article.owner"></app-article>
+      </ul>
+    </div>
+  </div>
+</div>
